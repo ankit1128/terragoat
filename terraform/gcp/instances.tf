@@ -24,7 +24,7 @@ resource google_compute_instance "server" {
   labels = {
     git_commit           = "37914a45800114d263c0dcd74b81b9dd01307e13"
     git_file             = "terraform/gcp/instances.tf"
-    git_last_modified_at = "2020-07-09 13:43:30"
+    git_last_modified_at = "2020-07-08 13:43:30"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
     git_org              = "bridgecrewio"
