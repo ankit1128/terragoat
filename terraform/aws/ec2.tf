@@ -51,7 +51,7 @@ resource "aws_ebs_volume" "web_host_storage" {
 }
 
 resource "aws_ebs_snapshot" "example_snapshot" {
-  # ebs snapshot without encryption
+  # ebs snapshot without encryption1
   volume_id   = "${aws_ebs_volume.web_host_storage.id}"
   description = "${local.resource_prefix.value}-ebs-snapshot"
   tags = merge({
