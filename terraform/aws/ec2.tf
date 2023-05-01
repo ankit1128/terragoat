@@ -32,7 +32,7 @@ EOF
 }
 
 resource "aws_ebs_volume" "web_host_storage" {
-  # unencrypted volume
+  # unencrypted volume1
   availability_zone = "${var.region}a"
   #encrypted         = false  # Setting this causes the volume to be recreated on apply 
   size = 1
@@ -75,7 +75,7 @@ resource "aws_volume_attachment" "ebs_att" {
 }
 
 resource "aws_security_group" "web-node" {
-  # security group is open to the world in SSH port
+  # security group is open to the world in SSH port1
   name        = "${local.resource_prefix.value}-sg"
   description = "${local.resource_prefix.value} Security Group"
   vpc_id      = aws_vpc.web_vpc.id
@@ -246,7 +246,7 @@ resource "aws_network_interface" "web-eni" {
   })
 }
 
-# VPC Flow Logs to S3
+# VPC Flow Logs to S31
 resource "aws_flow_log" "vpcflowlogs" {
   log_destination      = aws_s3_bucket.flowbucket.arn
   log_destination_type = "s3"
