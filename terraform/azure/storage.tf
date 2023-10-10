@@ -1,4 +1,4 @@
-resource "azurerm_managed_disk" "example" {
+resource "azurerm_managed_disk" "example1" {
   name                 = "terragoat-disk-${var.environment}"
   location             = var.location
   resource_group_name  = azurerm_resource_group.example.name
@@ -20,7 +20,7 @@ resource "azurerm_managed_disk" "example" {
   }
 }
 
-resource "azurerm_storage_account" "example" {
+resource "azurerm_storage_account" "example1" {
   name                     = "tgsa${var.environment}${random_integer.rnd_int.result}"
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
